@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LIV-IN Realty — Your Property Our Expertise</title>
-  <meta name="description" content="Buy, sell, lease premium homes & commercial spaces in Mumbai. Transparent pricing, verified listings, and end‑to‑end assistance." />
+  <meta name="description" content="Buy, sell, lease premium homes & commercial spaces in Mumbai. Transparent pricing, verified listings, and end-to-end assistance." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,222 +13,172 @@
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] },
-          colors: {
-            gold: { 500:'#d6a56d', 600:'#c39256', 700:'#a77a41' }
-          }
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: { brand: { 50:'#fff7ed',100:'#ffedd5',200:'#fed7aa',300:'#fdba74',400:'#fb923c',500:'#f97316',600:'#ea580c',700:'#c2410c',800:'#9a3412',900:'#7c2d12'} }
         }
       }
     }
   </script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    html { scroll-behavior: smooth; }
-    .glass { backdrop-filter: saturate(150%) blur(8px); }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"RealEstateAgent",
-    "name":"LIV-IN Realty",
-    "slogan":"Your Property Our Expertise",
-    "telephone":"+91 9930495033",
-    "email":"livin.realty@gmail.com",
-    "areaServed":["Mumbai","Maharashtra"],
-    "url":"https://liv-in.co.in",
-    "sameAs":["https://www.instagram.com/livin.realty"],
-    "address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressRegion":"MH","addressCountry":"IN"}
-  }
+  <style> html { scroll-behavior: smooth; } .glass { backdrop-filter: saturate(150%) blur(8px); } </style>
+
+  <!-- Use your published Google Sheet 'd/e/...' link -->
+  <script>
+    window.LIVIN_CONFIG = {
+      PUBLISHED_E_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRnXbgwuTh3--i3VwQfvEaP4Fxx0njohcJqNLkuuTNpVCyawUM7s6P1-9-AAgGiJ5f7PbydSDZUX67B/pubhtml",
+      GID: "0"
+    };
   </script>
 </head>
-<body class="font-sans bg-black text-slate-200">
-  <!-- Top bar -->
-  <div class="w-full bg-black text-gold-500 text-sm border-b border-zinc-800">
+<body class="font-sans text-slate-900 bg-gradient-to-b from-white to-slate-50">
+  <div class="w-full bg-slate-900 text-white text-sm">
     <div class="mx-auto max-w-7xl px-4 py-2 flex items-center justify-between">
-      <div>RERA‑compliant • Home loan assistance • Quick closings</div>
+      <div>RERA-compliant partners • Home loan assistance • Quick closings</div>
       <div class="hidden md:flex gap-4 items-center">
-        <a href="tel:+919930495033" class="underline">+91 99304 95033</a>
+        <a href="tel:+919930495033" class="underline">Call: +91 99304 95033</a>
         <a href="mailto:livin.realty@gmail.com" class="underline">livin.realty@gmail.com</a>
       </div>
     </div>
   </div>
 
-  <!-- Navbar -->
-  <header class="sticky top-0 z-50 bg-black/70 glass border-b border-zinc-800">
+  <header class="sticky top-0 z-50 border-b bg-white/80 glass">
     <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3">
-        <img src="./logo.jpg" alt="LIV‑IN" class="h-10 w-10 object-contain rounded-md ring-1 ring-zinc-800 bg-black" />
+        <img src="livin-logo.png" alt="LIV-IN" class="h-10 w-10 rounded-2xl object-cover border" onerror="this.style.display='none'">
         <div>
-          <div class="text-lg font-semibold text-white tracking-wide">LIV‑IN Realty</div>
-          <div class="text-xs text-gold-500 -mt-1">Your Property Our Expertise</div>
+          <div class="text-lg font-semibold">LIV-IN Realty</div>
+          <div class="text-xs text-slate-500 -mt-1">Your Property Our Expertise</div>
         </div>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#listings" class="hover:text-gold-500">Buy</a>
-        <a href="#listings" class="hover:text-gold-500">Rent</a>
-        <a href="#services" class="hover:text-gold-500">Services</a>
-        <a href="#about" class="hover:text-gold-500">About</a>
-        <a href="#contact" class="hover:text-gold-500">Contact</a>
+        <a href="#listings" class="hover:text-brand-600">Buy</a>
+        <a href="#listings" class="hover:text-brand-600">Rent</a>
+        <a href="#services" class="hover:text-brand-600">Services</a>
+        <a href="#about" class="hover:text-brand-600">About</a>
+        <a href="#contact" class="hover:text-brand-600">Contact</a>
       </nav>
       <div class="flex items-center gap-2">
-        <a href="https://wa.me/919930495033" target="_blank" class="hidden md:inline-flex px-3 py-2 rounded-xl border border-zinc-800 hover:bg-zinc-900">WhatsApp</a>
-        <button id="enquireBtn" class="px-4 py-2 rounded-xl bg-gold-600 text-black font-semibold hover:bg-gold-700">Enquire</button>
+        <a href="https://wa.me/919930495033" target="_blank" class="hidden md:inline-flex px-3 py-2 rounded-xl border hover:bg-slate-50">WhatsApp</a>
+        <button id="enquireBtn" class="px-4 py-2 rounded-xl bg-brand-600 text-white hover:bg-brand-700">Enquire</button>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 gap-8 px-4 py-12 md:py-16 items-center">
+  <section class="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 gap-8 px-4 py-10 md:py-16 items-center">
     <div class="space-y-6">
-      <h1 class="text-3xl md:text-5xl font-extrabold leading-tight text-white">Mumbai real estate, handled end‑to‑end</h1>
-      <p class="text-slate-300 md:text-lg">Verified listings, transparent pricing, and concierge‑style service from discovery to keys‑in‑hand.</p>
-
-      <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-3 shadow-sm">
+      <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Find your next home in <span class="underline decoration-brand-400">Mumbai</span></h1>
+      <p class="text-slate-600 md:text-lg">Handpicked listings by local experts. Transparent pricing, verified developers, and end-to-end assistance from discovery to keys-in-hand.</p>
+      <div class="rounded-2xl border bg-white p-3 shadow-sm">
         <div class="grid grid-cols-2 md:grid-cols-6 gap-2">
-          <input id="q" class="col-span-2 md:col-span-2 px-3 py-2 rounded-xl border border-zinc-800 bg-black text-slate-100" placeholder="Search location (e.g., Kandivali)">
-          <select id="beds" class="px-3 py-2 rounded-xl border border-zinc-800 bg-black text-slate-100">
+          <input id="q" class="col-span-2 md:col-span-2 px-3 py-2 rounded-xl border" placeholder="Search location (e.g., Kandivali)">
+          <select id="beds" class="px-3 py-2 rounded-xl border">
             <option value="">Beds</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4+</option>
           </select>
-          <select id="min" class="px-3 py-2 rounded-xl border border-zinc-800 bg-black text-slate-100">
-            <option value="">Min</option><option value="0">No Min</option><option value="10000000">₹1 Cr</option><option value="15000000">₹1.5 Cr</option><option value="20000000">₹2 Cr</option>
+          <select id="min" class="px-3 py-2 rounded-xl border">
+            <option value="">Min Price</option><option value="0">No Min</option><option value="10000000">₹1 Cr</option><option value="15000000">₹1.5 Cr</option><option value="20000000">₹2 Cr</option>
           </select>
-          <select id="max" class="px-3 py-2 rounded-xl border border-zinc-800 bg-black text-slate-100">
-            <option value="">Max</option><option value="20000000">₹2 Cr</option><option value="30000000">₹3 Cr</option><option value="40000000">₹4 Cr</option><option value="50000000">₹5 Cr</option>
+          <select id="max" class="px-3 py-2 rounded-xl border">
+            <option value="">Max Price</option><option value="20000000">₹2 Cr</option><option value="30000000">₹3 Cr</option><option value="40000000">₹4 Cr</option><option value="50000000">₹5 Cr</option>
           </select>
-          <button id="reset" class="px-3 py-2 rounded-xl border border-zinc-800">Reset</button>
-          <button id="search" class="px-3 py-2 rounded-xl bg-white text-black">Search</button>
+          <button id="reset" class="px-3 py-2 rounded-xl border">Reset</button>
+          <button id="search" class="px-3 py-2 rounded-xl bg-slate-900 text-white">Search</button>
         </div>
       </div>
-
-      <div class="flex flex-wrap gap-3 text-sm text-slate-400">
-        <span class="inline-flex items-center gap-2 rounded-full border border-zinc-800 px-3 py-1"><i data-lucide="shield-check" class="w-4 h-4"></i> RERA‑compliant</span>
-        <span class="inline-flex items-center gap-2 rounded-full border border-zinc-800 px-3 py-1"><i data-lucide="banknote" class="w-4 h-4"></i> Home loans</span>
-        <span class="inline-flex items-center gap-2 rounded-full border border-zinc-800 px-3 py-1"><i data-lucide="calendar" class="w-4 h-4"></i> Site visits</span>
+      <div class="flex flex-wrap gap-3 text-sm text-slate-600">
+        <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1"><i data-lucide="shield-check" class="w-4 h-4"></i> RERA-compliant partners</span>
+        <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1"><i data-lucide="banknote" class="w-4 h-4"></i> Home loan support</span>
+        <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1"><i data-lucide="calendar" class="w-4 h-4"></i> Site visit scheduling</span>
       </div>
     </div>
     <div class="relative">
-      <img src="https://images.unsplash.com/photo-1512914890250-92ce70f1a6bf?q=80&w=1600&auto=format&fit=crop" class="w-full rounded-3xl border border-zinc-800 object-cover shadow" alt="Mumbai skyline" />
-      <div class="absolute -bottom-5 left-5 rounded-2xl border border-zinc-800 bg-black/80 p-3 shadow">
-        <div class="text-xs text-slate-400">Featured</div>
-        <div class="font-medium text-white">2BHK — Kandivali West</div>
-        <div class="text-sm text-gold-500">Starting ₹1.96 Cr (all‑in approx)</div>
+      <img src="https://images.unsplash.com/photo-1512914890250-92ce70f1a6bf?q=80&w=1600&auto=format&fit=crop" class="w-full rounded-3xl border object-cover shadow" alt="Mumbai skyline" />
+      <div class="absolute -bottom-5 left-5 rounded-2xl border bg-white p-3 shadow">
+        <div class="text-xs text-slate-500">Featured</div>
+        <div class="font-medium">2BHK — Kandivali West</div>
+        <div class="text-sm">Starting ₹1.96 Cr (all-in approx)</div>
       </div>
     </div>
   </section>
 
-  <!-- Listings -->
   <section id="listings" class="mx-auto max-w-7xl px-4 py-10">
     <div class="mb-6 flex items-end justify-between">
       <div>
-        <h2 class="text-2xl md:text-3xl font-semibold text-white">Latest Listings</h2>
-        <p class="text-sm text-slate-400">Curated by LIV‑IN — updated regularly</p>
+        <h2 class="text-2xl md:text-3xl font-semibold">Latest Listings</h2>
+        <p class="text-sm text-slate-600">Curated by LIV-IN — connected to Google Sheets</p>
       </div>
-      <button class="px-4 py-2 rounded-xl border border-zinc-800 hover:bg-zinc-900" onclick="openLead('Add me to your VIP list for new launches.')">Get Alerts</button>
+      <button class="px-4 py-2 rounded-xl border" onclick="openLead('Add me to your VIP list for new launches.')">Get Alerts</button>
     </div>
     <div id="cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
-
     <template id="cardTpl">
-      <div class="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 hover:shadow-xl transition-shadow">
+      <div class="overflow-hidden rounded-2xl border bg-white hover:shadow-xl transition-shadow">
         <div class="relative aspect-[4/3] w-full overflow-hidden">
           <img class="h-full w-full object-cover" />
-          <div class="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-black/80 px-3 py-1 text-sm border border-zinc-800 text-slate-200">
+          <div class="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-sm">
             <i data-lucide="building-2" class="w-4 h-4"></i> <span class="tag"></span>
           </div>
         </div>
         <div class="p-4 space-y-2">
           <div class="flex items-start justify-between gap-2">
             <div>
-              <h3 class="text-lg font-semibold title text-white"></h3>
-              <p class="text-sm text-slate-400 flex items-center gap-1"><i data-lucide="map-pin" class="w-4 h-4"></i> <span class="loc"></span></p>
+              <h3 class="text-lg font-semibold title"></h3>
+              <p class="text-sm text-slate-500 flex items-center gap-1"><i data-lucide="map-pin" class="w-4 h-4"></i> <span class="loc"></span></p>
             </div>
             <div class="text-right">
-              <div class="font-semibold price text-gold-500"></div>
-              <p class="text-xs text-slate-500">All‑inclusive (approx)</p>
+              <div class="font-semibold price"></div>
+              <p class="text-xs text-slate-500">All-inclusive (approx)</p>
             </div>
           </div>
-          <div class="flex items-center gap-4 text-sm text-slate-300">
+          <div class="flex items-center gap-4 text-sm">
             <span class="inline-flex items-center gap-1"><i data-lucide="bed" class="w-4 h-4"></i> <span class="beds"></span> Bed</span>
             <span class="inline-flex items-center gap-1"><i data-lucide="bath" class="w-4 h-4"></i> <span class="baths"></span> Bath</span>
             <span class="inline-flex items-center gap-1"><i data-lucide="home" class="w-4 h-4"></i> <span class="area"></span> sq.ft</span>
           </div>
           <div class="flex gap-2 pt-2">
-            <button class="flex-1 px-3 py-2 rounded-xl bg-gold-600 text-black font-semibold enquire">Enquire</button>
-            <a target="_blank" rel="noreferrer" class="flex-1">
-              <button class="w-full px-3 py-2 rounded-xl border border-zinc-800 whatsapp">WhatsApp</button>
-            </a>
+            <button class="flex-1 px-3 py-2 rounded-xl bg-slate-900 text-white enquire">Enquire</button>
+            <a target="_blank" rel="noreferrer" class="flex-1"><button class="w-full px-3 py-2 rounded-xl border whatsapp">WhatsApp</button></a>
           </div>
         </div>
       </div>
     </template>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="mx-auto max-w-7xl px-4 py-12">
-    <div class="mb-6">
-      <h2 class="text-2xl md:text-3xl font-semibold text-white">Services</h2>
-      <p class="text-sm text-slate-400">Buy • Sell • Lease • Investments</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-      <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-5 shadow-sm">
-        <h3 class="font-medium mb-2 text-gold-500">Buyer Representation</h3>
-        <p class="text-sm text-slate-300">From discovery to keys‑in‑hand with zero stress.</p>
-      </div>
-      <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-5 shadow-sm">
-        <h3 class="font-medium mb-2 text-gold-500">Seller Mandates</h3>
-        <p class="text-sm text-slate-300">Pricing, staging, marketing, and negotiation.</p>
-      </div>
-      <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-5 shadow-sm">
-        <h3 class="font-medium mb-2 text-gold-500">Leasing</h3>
-        <p class="text-sm text-slate-300">High‑quality tenants and quick closures.</p>
-      </div>
-      <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-5 shadow-sm">
-        <h3 class="font-medium mb-2 text-gold-500">Investments</h3>
-        <p class="text-sm text-slate-300">Cash‑flow & appreciation‑focused deals.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
   <section id="contact" class="mx-auto max-w-7xl px-4 py-12">
-    <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-6 shadow-sm">
-      <h2 class="text-2xl md:text-3xl font-semibold text-white mb-4">Tell us what you need</h2>
+    <div class="rounded-2xl border bg-white p-6 shadow-sm">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4">Tell us what you need</h2>
       <form onsubmit="submitLead(event)" class="grid grid-cols-1 md:grid-cols-3 gap-3">
-        <input id="name" required class="px-3 py-2 rounded-xl border border-zinc-800 bg-black text-white" placeholder="Your name" />
-        <input id="phone" required class="px-3 py-2 rounded-xl border border-zinc-800 bg-black text-white" placeholder="Mobile number" />
-        <input id="email" class="px-3 py-2 rounded-xl border border-zinc-800 bg-black text-white" placeholder="Email (optional)" />
-        <textarea id="message" class="md:col-span-3 px-3 py-2 rounded-xl border border-zinc-800 bg-black text-white" rows="4" placeholder="Looking for a 2BHK in Kandivali West around ₹2 Cr..."></textarea>
+        <input id="name" required class="px-3 py-2 rounded-xl border" placeholder="Your name" />
+        <input id="phone" required class="px-3 py-2 rounded-xl border" placeholder="Mobile number" />
+        <input id="email" class="px-3 py-2 rounded-xl border" placeholder="Email (optional)" />
+        <textarea id="message" class="md:col-span-3 px-3 py-2 rounded-xl border" rows="4" placeholder="Looking for a 2BHK in Kandivali West around ₹2 Cr..."></textarea>
         <div class="md:col-span-3 flex gap-2">
-          <button type="submit" class="px-4 py-2 rounded-xl bg-gold-600 text-black font-semibold">Submit</button>
-          <a id="waLink" target="_blank" rel="noreferrer" class="px-4 py-2 rounded-xl border border-zinc-800">WhatsApp Now</a>
+          <button type="submit" class="px-4 py-2 rounded-xl bg-brand-600 text-white">Submit</button>
+          <a id="waLink" target="_blank" rel="noreferrer" class="px-4 py-2 rounded-xl border">WhatsApp Now</a>
         </div>
       </form>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="border-t border-zinc-800 bg-black">
-    <div class="mx-auto max-w-7xl px-4 py-6 text-sm text-slate-400 flex flex-col md:flex-row items-center justify-between gap-3">
-      <div>© <span id="year"></span> LIV‑IN Realty. All rights reserved.</div>
+  <footer class="border-t bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-6 text-sm text-slate-600 flex flex-col md:flex-row items-center justify-between gap-3">
+      <div>© <span id="year"></span> LIV-IN Realty. All rights reserved.</div>
       <div class="flex items-center gap-4">
-        <a href="#" class="hover:text-gold-500">Privacy</a>
-        <a href="#" class="hover:text-gold-500">Terms</a>
+        <a href="#" class="hover:underline">Privacy</a>
+        <a href="#" class="hover:underline">Terms</a>
       </div>
     </div>
   </footer>
 
-  <!-- Lead Modal -->
-  <div id="leadModal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/70 p-4">
-    <div class="w-full max-w-lg rounded-2xl bg-black border border-zinc-800 shadow">
-      <div class="flex items-center justify-between p-4 border-b border-zinc-800">
-        <h3 class="font-semibold text-white">Quick Enquiry</h3>
-        <button onclick="closeLead()" class="p-2 text-slate-300"><i data-lucide="x" class="w-5 h-5"></i></button>
+  <div id="leadModal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/50 p-4">
+    <div class="w-full max-w-lg rounded-2xl bg-white shadow">
+      <div class="flex items-center justify-between p-4 border-b">
+        <h3 class="font-semibold">Quick Enquiry</h3>
+        <button onclick="closeLead()" class="p-2"><i data-lucide="x" class="w-5 h-5"></i></button>
       </div>
       <div class="p-4 space-y-3">
-        <p class="text-slate-400 text-sm">Share your requirement and we’ll get back within 30 minutes during business hours.</p>
-        <textarea id="leadText" class="w-full px-3 py-2 rounded-xl border border-zinc-800 bg-black text-white" rows="4"></textarea>
+        <textarea id="leadText" class="w-full px-3 py-2 rounded-xl border" rows="4" placeholder="I'm interested in a 2BHK in Kandivali West around ₹2 Cr."></textarea>
         <div class="flex gap-2">
-          <button class="flex-1 px-4 py-2 rounded-xl bg-gold-600 text-black font-semibold" onclick="submitQuickLead()">Submit</button>
-          <a id="leadWa" target="_blank" rel="noreferrer" class="flex-1"><button class="w-full px-4 py-2 rounded-xl border border-zinc-800 text-white">WhatsApp</button></a>
+          <button class="flex-1 px-4 py-2 rounded-xl bg-slate-900 text-white" onclick="submitQuickLead()">Submit</button>
+          <a id="leadWa" target="_blank" rel="noreferrer" class="flex-1"><button class="w-full px-4 py-2 rounded-xl border">WhatsApp</button></a>
         </div>
       </div>
     </div>
@@ -238,84 +188,78 @@
     <i data-lucide="message-circle"></i>
   </a>
 
-  <!-- CONFIG: Listing System 2 (Google Sheet CMS) -->
-  <!-- 1) Make a Google Sheet with columns: id, title, price, beds, baths, area, location, tag, image
-       2) File → Share → Anyone with the link (Viewer)
-       3) File → Publish to the web → Entire document → Publish
-       4) Copy SHEET_ID from the sheet URL (between /d/ and /edit)
-       5) Put the GID (tab id) of the first sheet in SHEET_GID (often 0) -->
   <script>
-    window.LIVIN_CONFIG = { SHEET_ID: "REPLACE_WITH_YOUR_SHEET_ID", SHEET_GID: "0" };
-  </script>
+    function buildGvizUrl(publishedUrl, gid) {
+      const base = publishedUrl.replace(/\/pubhtml.*$/, '');
+      return base + '/gviz/tq?tqx=out:json&gid=' + encodeURIComponent(gid || '0');
+    }
 
-  <script>
     let LOADED_LISTINGS = [];
 
     async function fetchListings() {
-      const { SHEET_ID, SHEET_GID } = window.LIVIN_CONFIG;
-      if (!SHEET_ID || SHEET_ID === "REPLACE_WITH_YOUR_SHEET_ID") {
-        // Demo data until you add your Google Sheet
+      const cfg = window.LIVIN_CONFIG || {};
+      if (!cfg.PUBLISHED_E_URL) {
+        console.warn('No published sheet URL found, using demo data.');
         LOADED_LISTINGS = [
-          { id:'kandivali-2bhk-1', title:'2BHK Premium — Kandivali West', price:19600000, beds:2, baths:2, area:740, location:'Kandivali West, Mumbai', tag:'New Launch', image:'https://images.unsplash.com/photo-1505691723518-36a5ac3b2a59?q=80&w=1600&auto=format&fit=crop' },
-          { id:'powai-3bhk-1',     title:'Lakeview 3BHK — Powai',        price:32000000, beds:3, baths:3, area:1150, location:'Powai, Mumbai',              tag:'Hot',        image:'https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1600&auto=format&fit=crop' },
-          { id:'bandra-1bhk-1',    title:'Cozy 1BHK — Bandra',           price:18500000, beds:1, baths:1, area:520,  location:'Bandra West, Mumbai',       tag:'Resale',     image:'https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1600&auto=format&fit=crop' },
-          { id:'thane-2bhk-1',     title:'Garden 2BHK — Thane',          price:14000000, beds:2, baths:2, area:690,  location:'Thane, Maharashtra',       tag:'Value',      image:'https://images.unsplash.com/photo-1600585154340-1e496e9b796b?q=80&w=1600&auto=format&fit=crop' }
+          { id:'demo-1', title:'Demo 2BHK — Kandivali West', price:19600000, beds:2, baths:2, area:740, location:'Kandivali West, Mumbai', tag:'New Launch', image:'https://images.unsplash.com/photo-1505691723518-36a5ac3b2a59?q=80&w=1600&auto=format&fit=crop' }
         ];
-        renderCards(LOADED_LISTINGS);
-        return;
+        return renderCards(LOADED_LISTINGS);
       }
-      const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&gid=${SHEET_GID}`;
+      const url = buildGvizUrl(cfg.PUBLISHED_E_URL, cfg.GID || '0');
       const res = await fetch(url);
       const text = await res.text();
       const json = JSON.parse(text.replace(/^.*?\(/, '').replace(/\);?$/, ''));
-      const cols = json.table.cols.map(c => c.label.toLowerCase());
+
+      const cols = json.table.cols.map(c => (c.label || '').toLowerCase());
       LOADED_LISTINGS = json.table.rows.map(r => {
-        const o = {}; (r.c || []).forEach((c,i)=>{ o[cols[i]] = c && typeof c.v !== 'undefined' ? c.v : ''; });
+        const o = {}; r.c.forEach((c,i)=>{ o[cols[i]] = c && (c.f ?? c.v) || '' });
+        const num = v => v === '' ? 0 : Number(String(v).replace(/[^0-9.]/g,'')) || 0;
         return {
           id: String(o.id || crypto.randomUUID()),
           title: String(o.title || ''),
-          price: Number(o.price || 0),
-          beds: Number(o.beds || 0),
-          baths: Number(o.baths || 0),
-          area: Number(o.area || 0),
+          price: num(o.price),
+          beds: num(o.beds),
+          baths: num(o.baths),
+          area: num(o.area),
           location: String(o.location || ''),
           tag: String(o.tag || ''),
-          image: String(o.image || ''),
+          image: String(o.image || 'https://images.unsplash.com/photo-1600585154340-1e496e9b796b?q=80&w=1600&auto=format&fit=crop'),
         };
       });
       renderCards(LOADED_LISTINGS);
     }
 
-    const INR = n => new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(n);
+    const INR = n => new Intl.NumberFormat('en-IN', { style:'currency', currency:'INR', maximumFractionDigits:0 }).format(n||0);
 
-    function renderCards(list){
+    function renderCards(list) {
       const grid = document.getElementById('cards');
-      grid.innerHTML='';
+      grid.innerHTML = '';
       const tpl = document.getElementById('cardTpl');
       list.forEach(item => {
         const node = tpl.content.cloneNode(true);
         node.querySelector('img').src = item.image;
-        node.querySelector('.tag').textContent = item.tag;
-        node.querySelector('.title').textContent = item.title;
-        node.querySelector('.loc').textContent = item.location;
+        node.querySelector('.tag').textContent = item.tag || '';
+        node.querySelector('.title').textContent = item.title || '';
+        node.querySelector('.loc').textContent = item.location || '';
         node.querySelector('.price').textContent = INR(item.price);
-        node.querySelector('.beds').textContent = item.beds;
-        node.querySelector('.baths').textContent = item.baths;
-        node.querySelector('.area').textContent = item.area;
-        node.querySelector('.enquire').addEventListener('click',()=>openLead(`I'm interested in ${item.title} (${item.location}) around ${INR(item.price)}.`));
+        node.querySelector('.beds').textContent = item.beds || 0;
+        node.querySelector('.baths').textContent = item.baths || 0;
+        node.querySelector('.area').textContent = item.area || 0;
+        node.querySelector('.enquire').addEventListener('click', () => openLead(`I'm interested in ${item.title} (${item.location}) around ${INR(item.price)}.`));
         const wa = node.querySelector('.whatsapp').parentElement;
-        wa.href = `https://wa.me/919930495033?text=${encodeURIComponent(`Hi, I'm interested in ${item.title} (${item.location}).`)}`;
+        wa.href = "https://wa.me/919930495033?text=" + encodeURIComponent("Hi, I'm interested in " + item.title + " (" + item.location + ").");
         grid.appendChild(node);
       });
-      if (window.lucide) lucide.createIcons();
+      lucide.createIcons();
     }
 
-    function filter(){
+    function filter() {
       const q = document.getElementById('q').value.toLowerCase();
       const beds = document.getElementById('beds').value;
       const min = Number(document.getElementById('min').value || 0);
       const max = Number(document.getElementById('max').value || Infinity);
-      const out = LOADED_LISTINGS.filter(l => {
+      const base = LOADED_LISTINGS || [];
+      const out = base.filter(l => {
         const qOk = q ? (l.location + ' ' + l.title).toLowerCase().includes(q) : true;
         const bedsOk = beds ? (beds === '4' ? l.beds >= 4 : l.beds === Number(beds)) : true;
         const minOk = l.price >= min;
@@ -325,39 +269,18 @@
       renderCards(out);
     }
 
-    // Lead helpers
-    function openLead(msg='Hi, I have a property requirement.') {
-      document.getElementById('leadText').value = msg;
-      document.getElementById('leadWa').href = `https://wa.me/919930495033?text=${encodeURIComponent(msg)}`;
-      document.getElementById('leadModal').classList.remove('hidden');
-      document.getElementById('leadModal').classList.add('flex');
-    }
+    function openLead(msg='Hi, I have a property requirement.') { document.getElementById('leadText').value = msg; document.getElementById('leadWa').href = "https://wa.me/919930495033?text=" + encodeURIComponent(msg); document.getElementById('leadModal').classList.remove('hidden'); document.getElementById('leadModal').classList.add('flex'); }
     function closeLead(){ document.getElementById('leadModal').classList.add('hidden'); document.getElementById('leadModal').classList.remove('flex'); }
-    function submitQuickLead(){
-      const msg = document.getElementById('leadText').value || 'Hi, I have a property requirement.';
-      alert('Thanks! We\'ll get back within business hours.');
-      window.open(`https://wa.me/919930495033?text=${encodeURIComponent(msg)}`,'_blank');
-      closeLead();
-    }
-    function submitLead(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value || 'Hi, I have a property requirement.';
-      const text = `Hi LIV-IN Realty, I am ${name} (${phone}${email? ', '+email:''}). ${message}`;
-      document.getElementById('waLink').href = `https://wa.me/919930495033?text=${encodeURIComponent(text)}`;
-      alert('Submitted! Tap WhatsApp to chat with us now.');
-    }
+    function submitQuickLead(){ const msg = document.getElementById('leadText').value || 'Hi, I have a property requirement.'; alert('Thanks! We\'ll get back within business hours.'); window.open("https://wa.me/919930495033?text=" + encodeURIComponent(msg),'_blank'); closeLead(); }
+    function submitLead(e){ e.preventDefault(); const name = document.getElementById('name').value; const phone = document.getElementById('phone').value; const email = document.getElementById('email').value; const message = document.getElementById('message').value || 'Hi, I have a property requirement.'; const text = "Hi LIV-IN Realty, I am " + name + " (" + phone + (email? ", " + email : "") + "). " + message; document.getElementById('waLink').href = "https://wa.me/919930495033?text=" + encodeURIComponent(text); alert('Submitted! Tap WhatsApp to chat with us now.'); }
 
-    // Wire up
     document.getElementById('year').textContent = new Date().getFullYear();
     document.getElementById('search').addEventListener('click', filter);
     document.getElementById('reset').addEventListener('click', () => { ['q','beds','min','max'].forEach(id => document.getElementById(id).value=''); renderCards(LOADED_LISTINGS); });
     document.getElementById('enquireBtn').addEventListener('click', () => openLead());
 
     fetchListings();
-    if (window.lucide) lucide.createIcons();
+    lucide.createIcons();
   </script>
 </body>
 </html>
